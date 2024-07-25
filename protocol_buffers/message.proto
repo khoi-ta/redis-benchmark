@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+enum Side {
+  BUY = 0;
+  SELL = 1;
+}
+
+enum Status {
+  NEW = 0;
+  PENDING = 1;
+  FILL = 2;
+}
+
+enum OrderType {
+  LIMIT = 0;
+  MARKET = 1;
+}
+
+message OrderMessage {
+  string orderId = 1;
+  string externalId = 2;
+  Side side = 3;
+  string rawText = 4;
+  string price = 5;
+  int32 amount = 6;
+  Status status = 7;
+  OrderType orderType = 8;
+}

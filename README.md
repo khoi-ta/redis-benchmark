@@ -29,7 +29,7 @@ docker run -d --name speed-redis -p 6379:6379 -p 8001:8001 redis/redis-stack:lat
 - The objects will be sequencially stored in redis and then sequecially get by its key
 - The result is calculated in milisecond
 # Benchmark result
-The exact milisecond is depend on each execution but for most of the testing times json parsing is slower than others serialization/deserialization method. hset and json module of redis are the two slowest with more than a second
+The exact milisecond is depend on each execution. hset and json module of redis are the two slowest with more than a second
 ```
 string parser: 740.43115234375
 hset duration: 1118.1689453125
@@ -38,3 +38,10 @@ Protocol buffer: 722.647216796875
 Message package: 728.159912109375
 Pickle: 729.4521484375
 ```
+- A record of benchmark
+<center>
+<figure>
+    <img src="benchmark.png" width=500
+         alt="Albuquerque, New Mexico">
+</figure>
+<center>

@@ -69,7 +69,7 @@ class Scenarios():
     def benchmark_json(self):
         start = time.time() * 1000
         for order in self.orders:
-            self.client.set_json(order["client_order_id"], order)
+            self.client.set_json(order["client_order_id"], order, expired=10)
             
         for order in self.orders:
             value = self.client.get_json(order["client_order_id"])

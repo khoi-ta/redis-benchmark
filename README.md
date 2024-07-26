@@ -38,7 +38,7 @@ Protocol buffer: 722.647216796875
 Message package: 728.159912109375
 Pickle: 729.4521484375
 ```
-- A record of benchmark
+- A record of a benchmark
 <center>
 <figure>
     <img src="benchmark.png" width=500
